@@ -1,49 +1,49 @@
 // Text Blinking Start
-async function init() {
-    const node = document.querySelector("#type-text");
+// async function init() {
+//     const node = document.querySelector("#type-text");
   
-    await sleep(1000);
-    node.innerText = "";
-    await node.type("I'm Web ");
+//     await sleep(1000);
+//     node.innerText = "";
+//     await node.type("I'm Web ");
   
-    while (true) {
-      await node.type("Designer");
-      await sleep(2000);
-      await node.delete("Designer");
-      await node.type("Developer");
-      await sleep(2000);
-      await node.delete("Developer");
-    }
-  }
+//     while (true) {
+//       await node.type("Designer");
+//       await sleep(2000);
+//       await node.delete("Designer");
+//       await node.type("Developer");
+//       await sleep(2000);
+//       await node.delete("Developer");
+//     }
+//   }
   
   // Source code 🚩
   
-  const sleep = (time) => new Promise((resolve) => setTimeout(resolve, time));
+//   const sleep = (time) => new Promise((resolve) => setTimeout(resolve, time));
   
-  class TypeAsync extends HTMLSpanElement {
-    get typeInterval() {
-      const randomMs = 100 * Math.random();
-      return randomMs < 50 ? 10 : randomMs;
-    }
+//   class TypeAsync extends HTMLSpanElement {
+//     get typeInterval() {
+//       const randomMs = 100 * Math.random();
+//       return randomMs < 50 ? 10 : randomMs;
+//     }
   
-    async type(text) {
-      for (let character of text) {
-        this.innerText += character;
-        await sleep(this.typeInterval);
-      }
-    }
+//     async type(text) {
+//       for (let character of text) {
+//         this.innerText += character;
+//         await sleep(this.typeInterval);
+//       }
+//     }
   
-    async delete(text) {
-      for (let character of text) {
-        this.innerText = this.innerText.slice(0, this.innerText.length - 1);
-        await sleep(this.typeInterval);
-      }
-    }
-  }
+//     async delete(text) {
+//       for (let character of text) {
+//         this.innerText = this.innerText.slice(0, this.innerText.length - 1);
+//         await sleep(this.typeInterval);
+//       }
+//     }
+//   }
   
-  customElements.define("type-async", TypeAsync, { extends: "span" });
+//   customElements.define("type-async", TypeAsync, { extends: "span" });
   
-  init();
+//   init();
   
 
 // Text Blinking End
@@ -152,7 +152,7 @@ const offBtn = () => {
 
 
 
-// NAvBar Section Start
+// NavBar Section Start
 
     var mainMenu = document.querySelector('.main-menu');
     var barIcon = document.querySelector('#navBar');
@@ -168,7 +168,7 @@ const closeNav = () => {
     menu.style.display = 'none';
     barIcon.style.display = 'inline-block';
 }
-// NAvBar Section End
+// NavBar Section End
 
 
 
