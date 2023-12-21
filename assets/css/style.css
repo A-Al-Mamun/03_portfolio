@@ -72,7 +72,7 @@
   left: 0px;
   top: 0px;
   width: 30%;
-  /* z-index: -3; */
+  z-index: 1;
   height: 100vh;
   padding: 50px 0 0 50px;
  }
@@ -81,6 +81,7 @@
   color: var(--textColor);
   cursor: pointer;
   display: none;
+  z-index: 9999;
  }
  .main-menu nav{
   display: flex;
@@ -213,7 +214,6 @@
   left: 0;
   width: 100%;
   margin: 0 auto;
-  z-index: -1;
   display: flex;
   justify-content: space-between;
 }
@@ -750,12 +750,38 @@
   #navBar{
     display: block;
     cursor: pointer;
+    margin-top: -18px;
     z-index: 999;
   }
   .header-menu{
     display: none;
   }
-  .header-logo{}
+
+  .header{
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+  .header-logo{
+    flex-basis: 30%!important;
+    margin-left: 50px;
+  }
+  .header-logo a{
+    font-size: 1rem;
+  }
+  .header-log{
+    flex-basis: 15%!important;
+  }
+  .header-log a{
+    font-size: 1rem;
+  }
+  .header-btn{
+    flex-basis: 15%!important;
+    margin-right: 50px;
+  }
+  .header-btn a{
+    font-size: 1rem;
+  }
+
   .main-bottom .main-left h1{
     font-size: 38px;
     line-height: 30px;
@@ -830,6 +856,26 @@
   }
   .main span{
     font-size: 16px;
+  }
+}
+
+@media (max-width:440px) {
+
+  .header{
+    padding-top: 15px;
+  }
+  #navBar{
+    font-size: 1rem;
+    margin-top: -27px;
+  }
+  .header-logo a{
+    font-size: 0.8rem;
+  }
+  .header-log a{
+    font-size: 0.8rem;
+  }
+  .header-btn a{
+    font-size: 0.8rem;
   }
 }
  
